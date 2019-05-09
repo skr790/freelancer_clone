@@ -1,0 +1,95 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-color: #ffffff;
+}
+nav{
+    background-color: #ffffff;
+    font-size: 20px;
+}
+.navi{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr 1fr 1fr;
+    grid-template-areas: 'logo . . . sin log';
+    justify-items: center;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #0A00C9;
+    font-weight: 600;
+}
+.hero{
+    background-color: #1AADED;
+    height: 100vh;
+}
+.container{
+    padding: 0 10%;
+}
+.logo{
+    padding: 15px 0px;
+    grid-area: logo;
+    font-weight: 800;
+    font-size: 30px; 
+}
+.signup{
+    grid-area: sin;
+}
+.login{
+    grid-area: log;
+}
+.about{
+    color: #ffffff;
+    margin: 15% 0%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    grid-column-gap: 5px;   
+    grid-template-areas: 'head head . .'
+                        ' bt1 bt2 . .';
+}
+.bout{
+    grid-area: head;
+}
+.bout>h1{
+    font-size: 48px;
+}
+.bout>p{
+    font-size: 22px;
+}
+.propos{
+    grid-area: bt1;
+}
+.prodo{
+    grid-area: bt2;
+}
+.btn{
+    margin: 45px;
+    display: inline-block;
+    color: #1AADED;
+    font-weight: 600;
+    padding: 15px;
+    border: none;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+.btn:hover{
+    color: #fff;
+    background-color: #00E1FF;
+}
+@media ( max-width:960px ){
+    .container{
+        padding: 5px;
+    }
+    .navi{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 'logo . log sin';
+    }
+}
